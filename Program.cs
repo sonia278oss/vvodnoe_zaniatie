@@ -1,12 +1,13 @@
-﻿class Programm
+﻿using System;
+class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.Write("Введите двузначное число: ");
-        int number = int.Parse(Console.ReadLine());
-        int firstnumber = number / 10;
-        int secondnumber = number % 10;
-        Console.WriteLine($"Первая цифра: {firstnumber}");
-        Console.WriteLine($"Вторая цифра: {secondnumber}");
+        double x = 4.3;
+        double numerator = 1 + Math.Sqrt(Math.Abs(3 - Math.Pow(x, 2)));
+        double denominator = Math.Atan(Math.Pow(x, 2));
+        double secondPart = Math.Exp(Math.Sin(Math.Sqrt(x)));
+        double y = (numerator / denominator) - secondPart;
+        Console.WriteLine($"Результат y = {y:F4}");
     }
 }
